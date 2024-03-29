@@ -1,12 +1,9 @@
 #include<stdio.h>
 int factorial(int n){
-    int fact=1;
-    int i;
-    for(i=2;i<=n;i++)
-    {
-        fact=fact*i;
-    }
-    return fact;
+    if(n==1||n==0)
+    {return 0;
+        }
+    return n*factorial(n-1);
 }
 int main()
 {
@@ -15,5 +12,6 @@ int main()
     scanf("%d",&n);
     int fact=factorial(n);
     printf("%d",fact);
+    return 0;
     
 }
